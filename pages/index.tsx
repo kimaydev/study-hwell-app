@@ -3,6 +3,9 @@ import Header from '@/components/common/Header';
 import MapScene from '@/components/home/MapScene';
 import { Info } from '@/types/info';
 import useInfo from '@/hooks/useInfo';
+// SEO 적용하기
+import { NextSeo } from 'next-seo';
+
 interface IProps {
   infos: Info[];
 }
@@ -14,7 +17,7 @@ export default function Home({ infos }: IProps) {
 
   // 최초 mount가 되면, 즉 html이 출력이 되면 props를 출력한다.
   useEffect(() => {
-    console.log(infos);
+    // console.log(infos);
     // 전역에다 배열을 보관함
     initializeInfos(infos);
     // 새로운 정보가 들어온다면 다시 렌더링 해주기 위해서
@@ -22,6 +25,10 @@ export default function Home({ infos }: IProps) {
 
   return (
     <>
+      <NextSeo
+        title="건강증진센터 위치"
+        description="건강증진센터 위치 서비스 입니다."
+      />
       <Header />
       <MapScene />
     </>

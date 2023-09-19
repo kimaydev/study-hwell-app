@@ -12,7 +12,7 @@ import { NaverMap } from '@/types/map';
 const MapScene = () => {
   const { initializeMap } = useMap();
   const onLoadMap = (map: NaverMap) => {
-    console.log('로드 완료');
+    // console.log('로드 완료');
     initializeMap(map);
   };
   return (
