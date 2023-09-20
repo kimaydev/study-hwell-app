@@ -14,4 +14,16 @@ export default {
       href: '/favicon.ico',
     },
   ],
+  additionalLinkTags: [
+    {
+      rel: 'shortcut icon',
+      href: '/favicon.ico',
+    },
+  ],
+  additionalMetaTags: [
+    {
+      name: 'naver-site-verification',
+      content: '123bad2e0164106bc03b1aa95e8ac1f13fa58438',
+    },
+  ],
 };
